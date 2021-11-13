@@ -28,10 +28,9 @@
           <td class="text-center align-middle">{{post.date.toDate()|date:'dd/MM/yyyy HH:mm'}}</td>
           <td class="text-center align-middle">{{post.title}}</td>
           <td class="align-middle">
-            <span class="d-block text-truncate text-monospace" style="width: 60px;">{{post.content}}</span>            
+            <span class="d-block text-truncate text-monospace" style="width: 60px;">{{post.resume}}</span>
           </td>
           <td class="text-center align-middle">{{post.modified.toDate()|date:'dd/MM/yyyy HH:mm'}}</td>
-          <td class="text-center align-middle">{{post.category.title}}</td>
           <td class="d-flex justify-content-around align-items-center">
             <button type="button" (click)="saveEvent()" class="btn btn-success">
               <fa-icon icon="edit"></fa-icon>
@@ -56,23 +55,23 @@
   </div>
   <div class="modal-body">
     <div class="form-group">
+      <label for="selectCategory">Categoria</label>
+      <select class="form-control" id="selectCategory" formControlName="category">
+        <option>Escolha uma...</option>
+        <option *ngFor="let category of postCategories$|async" [ngValue]="category">{{category.title}}</option>
+      </select>
+    </div>
+    <div class="form-group">
       <label for="inputTitle">Título</label>
       <input formControlName="title" type="text" class="form-control" id="inputTitle">
     </div>
     <div class="form-group">
-      <label for="inputResume">Resumo</label>
-      <input formControlName="resume" type="text" maxlength="500" class="form-control" id="inputResume">
+      <label for="textareaResume">Resumo</label>
+      <textarea formControlName="resume" id="textareaResume" rows="3" maxlength="500" class="form-control"></textarea>
     </div>
     <div class="form-group">
-      <label for="inputDescription">Conteúdo</label>
-      <input formControlName="content" type="text" class="form-control" id="inputDescription">
-    </div>
-    <div class="form-group">
-      <label for="selectCategory">Categoria</label>
-      <select class="form-control" id="selectCategory" formControlName="category">
-        <option>Escolha um...</option>
-        <option *ngFor="let category of postCategories$|async" [ngValue]="category">{{category.title}}</option>
-      </select>
+      <label for="quillContent">Conteúdo</label>
+      <quill-editor formControlName="content" id="quillContent" placeholder="Insira aqui seu texto..." [required]="true" [styles]="{height: '300px'}"></quill-editor>
     </div>
   </div>
   <div class="modal-footer">

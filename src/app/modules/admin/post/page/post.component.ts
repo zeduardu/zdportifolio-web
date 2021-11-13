@@ -64,7 +64,9 @@ export class PostComponent implements OnInit {
   }
 
   addEvent(content: any) {
-    this.modalService.open(content);
+    this.modalService.open(content, {
+      size: 'lg'
+    });
     this.formGroup.reset();
     this.edit = false;
   }
