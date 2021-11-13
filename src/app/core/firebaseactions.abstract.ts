@@ -15,7 +15,7 @@ export abstract class FirebaseActions<T extends Model> implements Ibread<T> {
 
   docToClass(snapshotDoc: any): T {
     let object = {
-      id: snapshotDoc.id,
+      //id: snapshotDoc.id,
       ...(snapshotDoc.data() as T)
     }
     return plainToClass(this.type, object);
@@ -32,11 +32,11 @@ export abstract class FirebaseActions<T extends Model> implements Ibread<T> {
     return this.angularFirestoreCollection.valueChanges();
   }
 
-  addOrEdit(item: T): Promise<T | void> {
+  addOrEdit(item: T): Promise<void> | undefined {
     if (!item)
       return
 
-    let obj = null;
+    let obj: any = null;
     if (item instanceof this.type)
       obj = item.toObject();
     else

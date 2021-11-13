@@ -12,6 +12,14 @@ const routes: Routes = [
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
+    path: 'sobre-tecnologia',
+    component: ContentlayoutComponent,
+    loadChildren: () =>
+      import('./modules/sobre-tecnologia/sobre-tecnologia.module').then(
+        (m) => m.SobreTecnologiaModule
+      ),
+  },
+  {
     path: 'login',
     component: ContentlayoutComponent,
     loadChildren: () =>
@@ -24,7 +32,23 @@ const routes: Routes = [
       import('./modules/admin/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
       ),
-    canActivate: [AuthguardService]
+    canActivate: [AuthguardService],
+  },
+  {
+    path: 'admin/post/categories',
+    component: AdminlayoutComponent,
+    loadChildren: () =>
+      import('./modules/admin/postcategory/postcategory.module').then(
+        (m) => m.PostCategoryModule
+      ),
+    canActivate: [AuthguardService],
+  },
+  {
+    path: 'admin/post/posts',
+    component: AdminlayoutComponent,
+    loadChildren: () =>
+      import('./modules/admin/post/post.module').then((m) => m.PostModule),
+    canActivate: [AuthguardService],
   },
 ];
 

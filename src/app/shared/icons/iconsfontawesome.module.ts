@@ -12,9 +12,13 @@ import {
   faEdit,
   faFilter,
   faHome,
+  faPencilAlt,
   faPlus,
+  faTag,
   faTimes,
-  faTrash
+  faTrash,
+  faUser,
+  faUserCircle
 } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -33,7 +37,10 @@ export class IconsFontawesomeModule {
       faTrash,
       faTimes,
       faFilter,
-      faHome
+      faHome,
+      faUserCircle,
+      faTag,
+      faPencilAlt
     );
   }
 }

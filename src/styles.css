@@ -1,3 +1,32 @@
-html, body {
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Montserrat:wght@300;400;500;700&display=swap");
+
+html,
+body {
   height: 100%;
+  background-color: #1b1b1f;
+}
+
+.text-fira-400 {
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 152.4%;
+}
+
+.text-fira-500 {
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.text-montserrat-600i {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 126.78%;
 }

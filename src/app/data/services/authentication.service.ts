@@ -26,4 +26,12 @@ export class AuthenticationService {
   resetPassword(email: string): Promise<void> {
     return this.angularFireAuth.sendPasswordResetEmail(email);
   }
+
+  authenticatedUser(): Observable<firebase.User | null> {
+    return this.user
+  }
+
+  getCurrentUser(): firebase.User | null {
+    return firebase.auth().currentUser;
+  }
 }
