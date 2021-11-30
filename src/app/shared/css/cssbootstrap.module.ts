@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
-import { NgbAlertModule, NgbDatepickerModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbAlertModule,
+  NgbCollapseModule,
+  NgbDatepickerModule,
+  NgbModalModule
+} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -8,12 +13,14 @@ import { NgbAlertModule, NgbDatepickerModule, NgbModalModule } from '@ng-bootstr
   imports: [
     NgbModalModule,
     NgbAlertModule,
-    NgbDatepickerModule
+    NgbDatepickerModule,
+    NgbCollapseModule
   ],
   exports: [
     NgbModalModule,
     NgbAlertModule,
-    NgbDatepickerModule
+    NgbDatepickerModule,
+    NgbCollapseModule
   ]
 })
 export class CssBootstrapModule { }

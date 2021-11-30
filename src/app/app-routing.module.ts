@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AuthguardService } from './data/services/authguard.service';
-import { AdminlayoutComponent } from './layout/adminlayout/adminlayout.component';
-import { ContentlayoutComponent } from './layout/contentlayout/contentlayout.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {AuthguardService} from './data/services/authguard.service';
+import {AdminlayoutComponent} from './layout/adminlayout/adminlayout.component';
+import {ContentlayoutComponent} from './layout/contentlayout/contentlayout.component';
 
 const routes: Routes = [
   {
@@ -12,7 +12,7 @@ const routes: Routes = [
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'sobre-tecnologia',
+    path: 'abouttechnology',
     component: ContentlayoutComponent,
     loadChildren: () =>
       import('./modules/sobre-tecnologia/sobre-tecnologia.module').then(
@@ -56,4 +56,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
