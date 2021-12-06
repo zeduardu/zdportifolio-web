@@ -3,8 +3,9 @@
 
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   background-color: #1b1b1f;
+  color: #FAF9F0;
 }
 
 .text-fira-400 {
@@ -33,6 +34,12 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
+}
+
+.text-fira-700 {
+  font-family: 'Fira Code', monospace;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .text-montserrat-300 {
@@ -68,10 +75,38 @@ body {
   font-weight: 400;
 }
 
+.text-montserrat-500 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
 .text-montserrat-600i {
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
   font-weight: 600;
   font-size: 32px;
   line-height: 126.78%;
+}
+
+.text-montserrat-700 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.color-white {
+  color: #FAF9F0;
+}
+
+.color-orange {
+  color: #F6490D;
+}
+
+.color-cyan {
+  color: #1DCED8;
+}
+
+.bg-color {
+  color: #1B1B1F;
 }

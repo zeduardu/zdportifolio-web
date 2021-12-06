@@ -12,6 +12,11 @@ const routes: Routes = [
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
+    path:'public',
+    component: ContentlayoutComponent,
+    loadChildren: () => import('./modules/public/public.module').then((m) => m.PublicModule),
+  },
+  {
     path: 'abouttechnology',
     component: ContentlayoutComponent,
     loadChildren: () =>
@@ -50,6 +55,8 @@ const routes: Routes = [
       import('./modules/admin/post/post.module').then((m) => m.PostModule),
     canActivate: [AuthguardService],
   },
+  { path: 'about', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule) },
+  { path: 'public', loadChildren: () => import('./modules/public/public.module').then(m => m.PublicModule) },
 ];
 
 @NgModule({
