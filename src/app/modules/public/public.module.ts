@@ -1,23 +1,20 @@
-import { SharedModule } from 'src/app/shared/shared.module';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { SharedModule } from 'src/app/shared/shared.module';
 
-import { PublicRoutingModule } from './public-routing.module';
-import { PublicComponent } from './public.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ContactmeComponent } from './contactme/contactme.component';
-
+import { HomeComponent } from './home/home.component';
+import { PublicRoutingModule } from './public-routing.module';
+import { PublicComponent } from './public.component';
 
 @NgModule({
   declarations: [
     PublicComponent,
     AboutmeComponent,
-    ContactmeComponent
+    ContactmeComponent,
+    HomeComponent,
   ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    PublicRoutingModule
-  ]
+  imports: [CommonModule, SharedModule, PublicRoutingModule],
 })
-export class PublicModule { }
+export class PublicModule {}

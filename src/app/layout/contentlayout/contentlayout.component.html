@@ -1,26 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="w-100 h-100 mx-auto d-flex flex-column">
+  <header class="mb-auto">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExample08"
+        aria-controls="navbarsExample08"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-    <ul class="navbar-nav text-fira-500">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/">#Principal</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/abouttechnology">#Sobre_tecnologia</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">#Playground</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/public/about">#Sobre</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/public/contact/me">#Contato</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<router-outlet></router-outlet>
+      <div
+        class="collapse navbar-collapse justify-content-md-center"
+        id="navbarsExample08"
+      >
+        <ul class="navbar-nav text-fira-500">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/">#Principal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/abouttechnology"
+              >#Sobre_tecnologia</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">#Playground</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">#Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact/me">#Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="mt-auto">
+    <p class="text-center text-fira-400" style="color: #fbe8d3">
+      Produzido e mantido por
+      <a class="btn-link" href="https://github.com/zeduardu">José Eduardo</a>,
+      <img src="../../../assets/img/copyright_vector.svg" alt="Imagem de copyright" /> 2021
+      zeduardu.dev.br <img src="../../../assets/img/heart_vector.svg" alt="Imagem de coração"/>
+    </p>
+  </footer>
+</div>

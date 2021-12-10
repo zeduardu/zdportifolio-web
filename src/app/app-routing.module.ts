@@ -9,12 +9,6 @@ const routes: Routes = [
     path: '',
     component: ContentlayoutComponent,
     loadChildren: () =>
-      import('./modules/home/home.module').then((m) => m.HomeModule),
-  },
-  {
-    path: 'public',
-    component: ContentlayoutComponent,
-    loadChildren: () =>
       import('./modules/public/public.module').then((m) => m.PublicModule),
   },
   {

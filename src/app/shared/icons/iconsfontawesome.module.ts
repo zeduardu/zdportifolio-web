@@ -6,7 +6,8 @@ import {
 import {
   faGithub,
   faInstagram,
-  faLinkedin
+  faLinkedin,
+  faTwitter
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faEdit,
@@ -32,6 +33,7 @@ export class IconsFontawesomeModule {
       faGithub,
       faLinkedin,
       faInstagram,
+      faTwitter,
       faEdit,
       faPlus,
       faTrash,
