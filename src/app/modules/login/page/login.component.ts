@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/data/services/authentication.service';
 import Swal from 'sweetalert2';
@@ -6,9 +6,9 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
   email!: string;
   password!: string;
   message!: string;
@@ -19,9 +19,7 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {
-    // nothing to do
-  }
+
 
   logon() {
     if (this.email == undefined || this.password == undefined) {

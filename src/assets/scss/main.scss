@@ -1,0 +1,18 @@
+@use "~@angular/material" as mat;
+
+$white: mat.get-color-from-palette(mat.$grey-palette, 50);
+$orange: mat.get-color-from-palette(mat.$orange-palette, 900);
+$cyan: mat.get-color-from-palette(mat.$cyan-palette, 500);
+$backgroundColor: mat.get-color-from-palette(mat.$grey-palette, 900);
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $backgroundColor;
+  color: $white;
+}

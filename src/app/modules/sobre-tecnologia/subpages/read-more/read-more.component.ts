@@ -8,7 +8,7 @@ import { Util } from '../../../../shared/util';
 @Component({
   selector: 'app-read-more',
   templateUrl: './read-more.component.html',
-  styleUrls: ['./read-more.component.css'],
+  styleUrls: ['./read-more.component.scss'],
 })
 export class ReadMoreComponent implements OnInit {
   post!: Post;

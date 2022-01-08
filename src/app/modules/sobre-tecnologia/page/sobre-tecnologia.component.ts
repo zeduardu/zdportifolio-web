@@ -2,19 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PostService } from 'src/app/data/services/post.service';
 
-import { Post } from './../../../data/types/post.model';
-import { Util } from '../../../shared/util';
+import { Post } from '../../../data/types/post.model';
 
 @Component({
   selector: 'app-sobre-tecnologia',
   templateUrl: './sobre-tecnologia.component.html',
-  styleUrls: ['./sobre-tecnologia.component.css'],
+  styleUrls: ['./sobre-tecnologia.component.scss'],
 })
 export class SobreTecnologiaComponent implements OnInit {
   posts$!: Observable<Post[]>;
   readMorePost!: Post;
-  invertedImage: boolean = false;
-  showReadMore: boolean = false;
+  invertedImage = false;
+  showReadMore = false;
 
   constructor(private postService: PostService) {}
 

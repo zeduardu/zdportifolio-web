@@ -5,28 +5,25 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 import Swal from 'sweetalert2';
 
-import { PostcategoryService } from './../../../../data/services/postcategory.service';
-import { PostCategory } from './../../../../data/types/postcategory.model';
+import { PostcategoryService } from '../../../../data/services/postcategory.service';
+import { PostCategory } from '../../../../data/types/postcategory.model';
 
 @Component({
   selector: 'app-category',
   templateUrl: './postcategory.component.html',
-  styleUrls: ['./postcategory.component.css'],
+  styleUrls: ['./postcategory.component.scss'],
 })
 export class PostCategoryComponent implements OnInit {
   postCategories$!: Observable<PostCategory[]>;
   edit!: boolean;
-  displayDialog!: boolean;
   formGroup!: FormGroup;
 
   constructor(
     private postcategoryService: PostcategoryService,
     private formBuilder: FormBuilder,
-    private modalService: NgbModal
   ) {}
 
   ngOnInit(): void {
@@ -42,14 +39,14 @@ export class PostCategoryComponent implements OnInit {
     });
   }
 
-  addEvent(content: any) {
-    this.modalService.open(content);
+  addEvent(/*content: any*/) {
+    //this.modalService.open(content);
     this.formGroup.reset();
     this.edit = false;
   }
 
   saveEvent() {
-    this.modalService.dismissAll();
+    //this.modalService.dismissAll();
     this.postcategoryService
       .addOrEdit(this.formGroup.value)
       ?.then(() => {
@@ -59,7 +56,7 @@ export class PostCategoryComponent implements OnInit {
           'success'
         );
       })
-      .catch((error) => {
+      .catch(() => {
         Swal.fire(
           `Erro ao ${!this.edit ? 'adicionar' : 'editar'} essa categoria.`,
           '',
@@ -68,5 +65,7 @@ export class PostCategoryComponent implements OnInit {
       });
   }
 
-  deleteEvent() {}
+  deleteEvent() {
+    // to do
+  }
 }

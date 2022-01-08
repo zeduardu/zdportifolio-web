@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CssBootstrapModule } from './css/cssbootstrap.module';
 import { IconsFontawesomeModule } from './icons/iconsfontawesome.module';
 
 @NgModule({
@@ -10,15 +9,13 @@ import { IconsFontawesomeModule } from './icons/iconsfontawesome.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    IconsFontawesomeModule,
-    CssBootstrapModule,
+    IconsFontawesomeModule
   ],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    IconsFontawesomeModule,
-    CssBootstrapModule,
+    IconsFontawesomeModule
   ],
 })
 export class SharedModule {}

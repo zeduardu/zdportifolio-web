@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-private',
   templateUrl: './adminlayout.component.html',
-  styleUrls: ['./adminlayout.component.css']
+  styleUrls: ['./adminlayout.component.scss']
 })
 export class AdminlayoutComponent implements OnInit {
   user!: Observable<firebase.User | null>;

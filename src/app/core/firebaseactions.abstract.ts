@@ -14,7 +14,7 @@ export abstract class FirebaseActions<T extends Model> implements Ibread<T> {
   }
 
   docToClass(snapshotDoc: any): T {
-    let object = {
+    const object = {
       //id: snapshotDoc.id,
       ...(snapshotDoc.data() as T)
     }
@@ -22,7 +22,7 @@ export abstract class FirebaseActions<T extends Model> implements Ibread<T> {
   }
 
   read(id: string): Observable<T> {
-    let doc = this.angularFirestoreCollection.doc<T>(id);
+    const doc = this.angularFirestoreCollection.doc<T>(id);
     return doc.get().pipe(
       map(snapshot => this.docToClass(snapshot))
     );

@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-header d-flex flex-row justify-content-between align-content-center">
     <h3 class="mt-auto mb-auto">Posts</h3>
-    <button type="button" class="btn btn-outline-info btn-lg" (click)="addEvent(content)">
+    <button type="button" class="btn btn-outline-info btn-lg" (click)="addEvent()">
       <fa-icon icon="plus"></fa-icon>
     </button>
   </div>
@@ -44,38 +44,3 @@
     </table>
   </div>
 </div>
-
-<ng-template #content let-modal>
-  <form [formGroup]="formGroup">
-  <div class="modal-header">
-    <h5 class="modal-title">{{edit ? 'Atualizar' : 'Adicionar'}} categoria</h5>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
-      <span>&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <div class="form-group">
-      <label for="selectCategory">Categoria</label>
-      <select class="form-control" id="selectCategory" formControlName="category">
-        <option>Escolha uma...</option>
-        <option *ngFor="let category of postCategories$|async" [ngValue]="category">{{category.title}}</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="inputTitle">Título</label>
-      <input formControlName="title" type="text" class="form-control" id="inputTitle">
-    </div>
-    <div class="form-group">
-      <label for="textareaResume">Resumo</label>
-      <textarea formControlName="resume" id="textareaResume" rows="3" maxlength="500" class="form-control"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="quillContent">Conteúdo</label>
-      <quill-editor formControlName="content" id="quillContent" placeholder="Insira aqui seu texto..." [required]="true" [styles]="{height: '300px'}"></quill-editor>
-    </div>
-  </div>
-  <div class="modal-footer">
-    <button type="submit" class="btn btn-primary" (click)="saveEvent()">{{edit ? 'Atualizar' : 'Adicionar'}}</button>
-  </div>
-</form>
-</ng-template>

@@ -1,49 +1,25 @@
-<div class="w-100 h-100 mx-auto d-flex flex-column">
+<div class="h-full w-full flex flex-column">
   <header class="mb-auto">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExample08"
-        aria-controls="navbarsExample08"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
+    <mat-toolbar>
+      <button mat-icon-button class="xl:hidden lg:hidden" aria-label="Example icon button with a menu icon" [mat-menu-trigger-for]="menu">
+        <mat-icon>menu</mat-icon>
       </button>
-
-      <div
-        class="collapse navbar-collapse justify-content-md-center"
-        id="navbarsExample08"
-      >
-        <ul class="navbar-nav text-fira-500">
-          <li class="nav-item active">
-            <a class="nav-link" routerLink="/">#Principal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/abouttechnology"
-              >#Sobre_tecnologia</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">#Playground</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about">#Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contact/me">#Contato</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <mat-menu #menu>
+      </mat-menu>
+      <nav class="hidden">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">#Principal</a>
+        <a routerLink="/abouttechnology" routerLinkActive="active">#Sobre_tecnologia</a>
+        <a routerLink="/playground" routerLinkActive="active">#Playground</a>
+        <a routerLink="/about" routerLinkActive="active">#Sobre</a>
+        <a routerLink="/contact/me" routerLinkActive="active">#Contato</a>
+      </nav>
+    </mat-toolbar>
   </header>
-  <main>
+  <main class="px-3">
     <router-outlet></router-outlet>
   </main>
-  <footer class="mt-auto">
-    <p class="text-center text-fira-400" style="color: #fbe8d3">
+  <footer class="mt-auto text-center">
+    <p class="zd-text-center text-fira-400" style="color: #fbe8d3">
       Produzido e mantido por
       <a class="btn-link" href="https://github.com/zeduardu">José Eduardo</a>,
       <img src="../../../assets/img/copyright_vector.svg" alt="Imagem de copyright" /> 2021

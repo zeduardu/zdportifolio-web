@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 
 @Component({
   selector: 'app-public',
   templateUrl: './contentlayout.component.html',
-  styleUrls: ['./contentlayout.component.css']
+  styleUrls: ['./contentlayout.component.scss']
 })
-export class ContentlayoutComponent implements OnInit {
+export class ContentlayoutComponent  {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor() {}
 }

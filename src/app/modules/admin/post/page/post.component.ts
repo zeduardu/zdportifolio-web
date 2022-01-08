@@ -1,6 +1,6 @@
 import { AuthenticationService } from 'src/app/data/services/authentication.service';
-import { PostcategoryService } from './../../../../data/services/postcategory.service';
-import { PostCategory } from './../../../../data/types/postcategory.model';
+import { PostcategoryService } from '../../../../data/services/postcategory.service';
+import { PostCategory } from '../../../../data/types/postcategory.model';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -8,17 +8,16 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 import Swal from 'sweetalert2';
 
-import { PostService } from './../../../../data/services/post.service';
-import { Post } from './../../../../data/types/post.model';
+import { PostService } from '../../../../data/services/post.service';
+import { Post } from '../../../../data/types/post.model';
 
 @Component({
   selector: 'app-category',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css'],
+  styleUrls: ['./post.component.scss'],
 })
 export class PostComponent implements OnInit {
   posts$!: Observable<Post[]>;
@@ -32,7 +31,6 @@ export class PostComponent implements OnInit {
     private postCategoryService: PostcategoryService,
     private authServ: AuthenticationService,
     private formBuilder: FormBuilder,
-    private modalService: NgbModal
   ) {}
 
   ngOnInit(): void {
@@ -63,17 +61,12 @@ export class PostComponent implements OnInit {
     });
   }
 
-  addEvent(content: any) {
-    this.modalService.open(content, {
-      size: 'lg'
-    });
-    this.formGroup.reset();
-    this.edit = false;
+  addEvent() {
+    // to do
   }
 
   saveEvent() {
     this.setStandardValues();
-    this.modalService.dismissAll();
     this.postService
       .addOrEdit(this.formGroup.value)
       ?.then(() => {
@@ -83,7 +76,7 @@ export class PostComponent implements OnInit {
           'success'
         );
       })
-      .catch((error) => {
+      .catch(() => {
         Swal.fire(
           `Erro ao ${!this.edit ? 'adicionar' : 'editar'} esse post.`,
           '',
@@ -92,5 +85,7 @@ export class PostComponent implements OnInit {
       });
   }
 
-  deleteEvent() {}
+  deleteEvent() {
+    //to do
+  }
 }

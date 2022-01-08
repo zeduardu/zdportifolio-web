@@ -17,26 +17,24 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <ngb-alert
+        <!--<ngb-alert
           #selfClosingAlert
           *ngIf="successMessage"
           type="success"
           (closed)="successMessage = ''"
           >{{ successMessage }}
-        </ngb-alert>
+        </ngb-alert>-->
 
         <form action="https://formsubmit.co/zeduardu@gmail.com" method="POST">
           <input
             type="hidden"
             name="_autoresponse"
-            value="Agradeço seu contato, responderei o quanto antes."
-          />
-          <input type="hidden" name="_subject" value="Zeduardu.dev Contacto" />
+            value="Agradeço seu contato, responderei o quanto antes."/>
+          <input type="hidden" name="_subject" value="Zeduardu.dev Contacto"/>
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:4200/public/contact/sended"
-          />
+            value="http://localhost:4200/public/contact/sended"/>
 
           <div class="row">
             <div class="col-md-4">
@@ -46,8 +44,7 @@
                   type="text"
                   class="form-control"
                   name="name"
-                  id="name-form1-4"
-                />
+                  id="name-form1-4"/>
               </div>
             </div>
             <div class="col-md-4">
@@ -57,8 +54,7 @@
                   type="email"
                   name="email"
                   class="form-control"
-                  id="email-form1-4"
-                />
+                  id="email-form1-4"/>
               </div>
             </div>
             <div class="col-md-4">
@@ -68,8 +64,7 @@
                   type="tel"
                   name="phone"
                   class="form-control"
-                  id="phone-form1-4"
-                />
+                  id="phone-form1-4"/>
               </div>
             </div>
           </div>
