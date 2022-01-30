@@ -1,9 +1,11 @@
-@use "~@angular/material" as mat;
-
-$white: mat.get-color-from-palette(mat.$grey-palette, 50);
-$orange: mat.get-color-from-palette(mat.$orange-palette, 900);
-$cyan: mat.get-color-from-palette(mat.$cyan-palette, 500);
-$backgroundColor: mat.get-color-from-palette(mat.$grey-palette, 900);
+:root {
+  --text-color-primary: #FAF9F0;
+  --text-color-secondary: #F6490D;
+  --button-color: #1DCED8;
+  --background: #1B1B1F;
+  --text-font-primary: 'Fira Code', monospace;
+  --text-font-secondary: 'Montserrat', sans-serif;
+}
 
 html, body {
   width: 100%;
@@ -13,6 +15,6 @@ html, body {
 }
 
 body {
-  background-color: $backgroundColor;
-  color: $white;
+  background-color: var(--background);
+  color: var(--text-color-primary);
 }

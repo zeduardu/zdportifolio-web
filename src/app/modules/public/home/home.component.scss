@@ -1,0 +1,14 @@
+.home-apresentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-apresentation h2,p {
+  font-family: var(--text-font-primary);
+}
+
+.home-apresentation h1 {
+  font-family: var(--text-font-secondary);
+}
