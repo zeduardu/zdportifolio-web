@@ -5,10 +5,27 @@
   justify-content: center;
 }
 
+.home-apresentation * {
+  margin-bottom: 2rem;
+}
+
 .home-apresentation h2,p {
   font-family: var(--text-font-primary);
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .home-apresentation h1 {
   font-family: var(--text-font-secondary);
+  font-size: 2rem;
+}
+
+.home-social {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-social a fa-icon {
+  font-size: 2rem;
 }
