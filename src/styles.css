@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Montserrat:ital,wght@1,700&display=swap');
+
 :root {
   --background:#1B1B1F;
   --text-color: #faf9f0;
   --active-text: #f6490d;
   --button: #1dced8;
+	--primary-font: 'Fira Code', monospace;
+	--secondary: 'Montserrat', sans-serif;
 }
 
 /*** CSS Reset ***/
@@ -11,6 +15,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -57,3 +65,107 @@ table {
 }
 
 /*** CSS Reset End ***/
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text-color);
+	font-family: var(--primary-font);
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	margin: 0 auto 0 auto;
+}
+
+header {
+	margin-bottom: auto;
+}
+
+header app-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header app-header .brand {
+	height: 40px;
+	width: 40px;
+}
+
+header app-header>button {
+	border: none;
+	background-color: var(--background);
+	color: var(--text-color);
+	cursor: pointer;	
+}
+
+@media screen and (min-width: 768px){
+	header app-header {
+		display: none
+	}
+
+	header app-header>button {
+		display: none;
+	}
+}
+
+.nav-collapse {
+	overflow: hidden;
+	max-height: 0px;
+	transition: max-height 1s ease-in-out;
+}
+
+.nav-show {
+	max-height: 300px;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	padding-top: 10px;
+}
+
+.nav-link  {
+	margin: 5px 0px 5px 0px;
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.nav-active {
+	color: var(--active-text);
+}
+
+.nav a:hover {
+	color: var(--active-text);
+	text-decoration: none;
+}
+
+@media screen and (min-width: 768px){
+	.nav-collapse {
+		overflow: hidden;
+		max-height: 50px;
+		transition: none;
+	}
+
+	.nav {
+		display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+	}
+}
+
+footer {
+	margin-top: auto;
+}

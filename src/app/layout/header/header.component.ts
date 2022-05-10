@@ -12,4 +12,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  show() {
+    let navigation = document.getElementById("navigation");
+    if (navigation?.classList.contains("nav-show")) {
+      navigation?.classList.remove("nav-show");
+      return;
+    }      
+    navigation?.classList.add("nav-show");
+  }
 }
