@@ -1,0 +1,41 @@
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presentation h3 {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 450;
+  /* font-size: 28px; */
+  font-size: 3vw;
+  line-height: 126%;
+  /* or 35px */
+  text-align: center;
+  color: #FAF9F0;
+}
+
+.presentation h1 {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  /* font-size: 60px; */
+  font-size: 5vw;
+  line-height: 126.78%;
+  /* identical to box height, or 76px */
+  text-align: center;
+  color: #FAF9F0;
+}
+
+.presentation h2 {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 450;
+  /* font-size: 28px; */
+  font-size: 3vw;
+  line-height: 152.4%;
+  /* identical to box height, or 43px */
+  text-align: center;
+  color: #FAF9F0;
+}
